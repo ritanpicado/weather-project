@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💦Weather🌧</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/336782f3d8.js" crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form">
+                    <form class="form-inline d-flex justify-content-center md-form form-sm active-pink-2 mt-2"
+                        id="search-form">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Enter city..."
+                            aria-label="Search" autocomplete="off" id="Search-text-input" />
+                        <div class="search-bar">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button>
+                Current Location
+            </button>
+            <div class="col-sm">
+                <h1>
+                    Lisbon
+                </h1>
+            </div>
+        </div>
+    </div>
+    <h4>
+        Tuesday 16:00
+    </h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <h2>
+                    38ºC
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="beach-day">
+                    <img src="Images/Sun.svg" alt="Beach-day" width="350px" />
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="sunny">
+                    <i class="fas fa-sun"> </i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                Tue
+                <br />
+                35ºC
+                <i class="fas fa-sun"> </i>
+            </div>
+            <div class="col-2">
+                Wed
+                <br />
+                32ºC
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="col-2">
+                Thu
+                <br />
+                25ºC
+                <br />
+                <i class="fas fa-cloud-rain"></i>
+            </div>
+            <div class="col-2">
+                Fri
+                <br />
+                30ºC
+                <i class="fas fa-cloud-sun-rain"></i>
+            </div>
+            <div class="col-2">
+                Sat
+                <br />
+                32ºC
+                <i class="fas fa-cloud-sun"></i>
+            </div>
+        </div>
+    </div>
+    <span class="unit">
+        <a href="" id="celsius-link"> ºC <a />
+            |
+            <a href="#" id="fahrenheit-link"> ºF
+                <span />
+</body>
+
+</html>

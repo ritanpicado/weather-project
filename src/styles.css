@@ -1,0 +1,120 @@
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.form {
+  font-family: Varela Round;
+  padding: 0 200px 0 0;
+}
+.search-bar i {
+  position: fixed;
+  bottom: 750px;
+  left: 350px;
+  font-size: 18px;
+  display: inline;
+}
+button {
+  position: fixed;
+  right: 55%;
+  top: 6%;
+  left: 35%
+  font-family: Varela Round;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4)
+  border: 2px solid rgb(128, 0, 128);
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+}
+.row {
+  margin-top: 40px;
+}
+
+.col-sm h1 {
+  position: fixed;
+  font-family: Varela Round;
+  font-weight: 800px;
+  width: 250px;
+  border: 2px solid rgb(128, 0, 128);
+  border-radius: 15px;
+  font-family: Varela Round;
+  margin: 80px 360px 0 50px;
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+}
+button:hover {
+  background: rgb(197, 154, 223);
+  color: #fff;
+  cursor: pointer;
+}
+
+.col-1 h2 {
+  position: fixed;
+  margin: 100px 40px 0 675px;
+  width: 150px;
+  font-family: Varela Round;
+  text-align: center;
+  border: 2px solid purple;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+}
+.unit {
+  position: fixed;
+  left: 70%;
+  top: 27.5%;
+  font-family: Varela Round;
+  color: purple;
+}
+.beach-day {
+  position: fixed;
+  padding: 60px 10px 20px 80px;
+  top: 80px;
+}
+h4 {
+  position: fixed;
+  left: 825px;
+  top: 80px;
+  font-family: Varela Round;
+}
+i {
+  margin: 130px 450px 0 117px;
+  color: #dbabf7;
+  font-size: 130px;
+}
+
+.col-2 {
+  border: 2px solid purple;
+  border-radius: 15px;
+  font-size: 20px;
+  text-align: center;
+  font-family: Varela Round;
+  padding: 10px 30px 10px 30px;
+  margin-top: 80px;
+  margin-right: 20px;
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+}
+.col-2 i {
+  font-size: 30px;
+  display: block;
+  margin: auto;
+  color: #c59adf;
+}
