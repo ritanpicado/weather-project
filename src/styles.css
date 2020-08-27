@@ -18,11 +18,11 @@ button {
   right: 55%;
   top: 6%;
   left: 35%
-  font-family: Varela Round;
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4)
   border: 2px solid rgb(128, 0, 128);
   border-radius: 20px;
   transition: all 200ms ease-in-out;
+  font-family: Varela Round;
   background-image: linear-gradient(
     to top,
     #fdcbf1 0%,
