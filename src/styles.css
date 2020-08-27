@@ -112,6 +112,10 @@ i {
     #e6dee9 100%
   );
 }
+.opensource {
+  position: fixed;
+  left: 10%;
+}
 .col-2 i {
   font-size: 30px;
   display: block;
