@@ -17,18 +17,18 @@ button {
   position: fixed;
   right: 55%;
   top: 6%;
-  left: 35%
-  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4)
+  left: 35%;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.1);
   border: 2px solid rgb(128, 0, 128);
-  border-radius: 20px;
   transition: all 200ms ease-in-out;
-  font-family: Varela Round;
   background-image: linear-gradient(
     to top,
     #fdcbf1 0%,
     #fdcbf1 1%,
     #e6dee9 100%
   );
+  font-family: Varela Round;
+  border-radius: 20px;
 }
 .row {
   margin-top: 40px;
