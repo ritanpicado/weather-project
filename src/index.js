@@ -62,6 +62,8 @@ fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("h2").innerHTML =
+    Math.round(response.data.main.temp) + "ºC";
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
