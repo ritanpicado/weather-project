@@ -42,16 +42,26 @@ form.addEventListener("click", search);
 let celsius = document.querySelector("#celsius-link");
 let fahrenheit = document.querySelector("#fahrenheit-link");
 
-function changeUnit() {
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `100ºF`;
+function displayFahrenheitTemperature() {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElemment = document.querySelector("h2");
+  temperatureElemment.innerHTML = Math.round(fahrenheitTemperature) + "ºF";
 }
-fahrenheit.addEventListener("click", changeUnit);
+
+function displayCelsiusTemperature() {
+  event.preventDefault();
+  let temperatureElemment = document.querySelector("h2");
+  temperatureElemment.innerHTML = Math.round(celsiusTemperature) + "ºC";
+}
+let celsiusTemperature = null;
+
+celsius.addEventListener("click", displayCelsiusTemperature);
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("h2").innerHTML =
-    Math.round(response.data.main.temp) + "ºC";
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
