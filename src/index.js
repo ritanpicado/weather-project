@@ -43,7 +43,7 @@ let celsius = document.querySelector("#celsius-link");
 let fahrenheit = document.querySelector("#fahrenheit-link");
 
 function formatHours(timestamp) {
-  let now = new Date();
+  let now = new Date(timestamp);
 
   let dates = document.querySelector("h4");
 
@@ -93,6 +93,62 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   forecastElement.innerHTML = `
+  <div class="col-2">
+    ${formatHours(forecast.dt * 1000)}
+    <br />
+    ${Math.round(forecast.main.temp_max)}º  | ${Math.round(
+    forecast.main.temp_min
+  )}º
+    <div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="Sunny" id="icon" width="70px" />
+   </div>
+  </div>`;
+  forecast = response.data.list[1];
+  forecastElement.innerHTML += `
+  <div class="col-2">
+    ${formatHours(forecast.dt * 1000)}
+    <br />
+    ${Math.round(forecast.main.temp_max)}º  | ${Math.round(
+    forecast.main.temp_min
+  )}º
+    <div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="Sunny" id="icon" width="70px" />
+   </div>
+  </div>`;
+  forecast = response.data.list[2];
+  forecastElement.innerHTML += `
+  <div class="col-2">
+    ${formatHours(forecast.dt * 1000)}
+    <br />
+    ${Math.round(forecast.main.temp_max)}º  | ${Math.round(
+    forecast.main.temp_min
+  )}º
+    <div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="Sunny" id="icon" width="70px" />
+   </div>
+  </div>`;
+  forecast = response.data.list[3];
+  forecastElement.innerHTML += `
+  <div class="col-2">
+    ${formatHours(forecast.dt * 1000)}
+    <br />
+    ${Math.round(forecast.main.temp_max)}º  | ${Math.round(
+    forecast.main.temp_min
+  )}º
+    <div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="Sunny" id="icon" width="70px" />
+   </div>
+  </div>`;
+  forecast = response.data.list[4];
+  forecastElement.innerHTML += `
   <div class="col-2">
     ${formatHours(forecast.dt * 1000)}
     <br />
