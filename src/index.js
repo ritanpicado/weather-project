@@ -42,6 +42,24 @@ form.addEventListener("click", search);
 let celsius = document.querySelector("#celsius-link");
 let fahrenheit = document.querySelector("#fahrenheit-link");
 
+function formatHours(timestamp) {
+  let now = new Date();
+
+  let dates = document.querySelector("h4");
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+
 function displayFahrenheitTemperature() {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -71,10 +89,31 @@ function displayWeatherCondition(response) {
   );
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  forecastElement.innerHTML = `
+  <div class="col-2">
+    ${formatHours(forecast.dt * 1000)}
+    <br />
+    ${Math.round(forecast.main.temp_max)}º  | ${Math.round(
+    forecast.main.temp_min
+  )}º
+    <div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="Sunny" id="icon" width="70px" />
+   </div>
+  </div>`;
+}
+
 function searchCity(city) {
   let apiKey = "98a75b44ef40d2758688b751e4f7d20b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
